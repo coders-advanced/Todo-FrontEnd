@@ -3,7 +3,14 @@ import { ButtonProps } from ".";
 
 const ButtonModifiers = {
   todo: () => css`
-    /* The TodoBar Button */
+    padding: 7px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 8px;
+    border: solid 1px #E9E8EB;
+    font-weight: 500;
+    text-transform: capitalize
   `,
   primary: (theme: DefaultTheme) => css`
     background-color: ${theme["primary-purple-dark"]};
@@ -25,10 +32,20 @@ export const ButtonContainer = styled.button<ButtonProps>`
     text-transform: uppercase;
     font-family: ${theme.fonts.display};
     transition: all .3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
     &:hover {
       filter: brightness(0.8);
     }
     ${!!variant && ButtonModifiers[variant](theme)}
   `}
+`;
+
+export const ButtonIcon = styled.span`
+  svg{
+    display: block;
+
+  }  
 `;

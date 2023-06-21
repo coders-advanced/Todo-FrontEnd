@@ -1,15 +1,14 @@
 import * as S from "./styles";
-import { AddNote } from "../../components/AddNote";
 import { CardNote } from "../../components/CardNote";
+import { TodoBar } from "../../components/TodoBar";
 export const Dashboard = () => {
   return (
     <>
       <S.Wrapper>
-        <AddNote />
+        <TodoBar />
 
+        <CardNote />
       </S.Wrapper>
-
-      <CardNote />
     </>
   );
 
