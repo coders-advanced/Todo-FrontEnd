@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     background-color: ${theme["primary-white"]};
     display: flex;
     gap: 10px;
-    justify-content: end;
+    justify-content: space-between;
     padding: 10px;
     margin: 5px;
     border-radius: 8px;
