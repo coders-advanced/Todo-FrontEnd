@@ -6,7 +6,7 @@ export type ButtonProps = {
   executeOnPress?: () => void;
   variant?: "todo" | "primary" | "secondary";
   leftIcon?: ReactNode;
-  rightIcon?: ReactNode,
+  rightIcon?: JSX.Element,
 };
 
 export function CustomButton({

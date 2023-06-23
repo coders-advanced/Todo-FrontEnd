@@ -3,8 +3,8 @@ import { ButtonProps } from ".";
 
 const ButtonModifiers = {
   todo: () => css`
-    padding: 7px 20px;
-    font-size: 18px;
+    padding: 6px 12px;
+    font-size: 14px;
     background-color: transparent;
     color: #000;
     border-radius: 8px;
