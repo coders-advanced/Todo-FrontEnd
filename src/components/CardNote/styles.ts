@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
   max-width: 351px;
-  width:100%;
+  width: 100%;
   border: 1px solid rgba(146, 151, 183, 0.16);
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
   border-radius: 12px;
@@ -13,50 +14,51 @@ export const Wrapper = styled.div`
 `;
 export const Heading = styled.div`
   display: flex;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   justify-content: space-between;
   margin-bottom: 25px;
-  span{
+  span {
     /* color: ${({ theme }) => theme["secondary-black-button"]}; */
-    color: #667EFF;
+    color: #667eff;
     font-weight: 400;
-    font-size: 14px; 
+    font-size: 14px;
     display: flex;
     line-height: 30px;
     justify-content: center;
-align-items: center;
-    background: #E5E8FB;
+    align-items: center;
+    background: #e5e8fb;
     border-radius: 25px;
     padding: 4px 16px;
   }
-  svg{
+  svg {
     cursor: pointer;
-    path{
-      
+    path {
     }
   }
 `;
 export const Content = styled.div`
-margin-bottom: 37px;
-  h2{
-    color: #282C41;
+  margin-bottom: 37px;
+  h2 {
+    color: #282c41;
     font-weight: 600;
     font-size: 20px;
     line-height: 140%;
     margin-bottom: 5px;
   }
-  p{
-    color: #ADAEB1;
+  p {
+    color: #adaeb1;
     font-weight: 500;
-  font-size: 15px;
-  line-height: 140%;
+    font-size: 15px;
+    line-height: 140%;
   }
 `;
 export const Footer = styled.time`
-  color: #282C41;
+  color: #282c41;
   font-weight: 500;
   font-size: 13px;
   line-height: 140%;
   display: flex;
   align-self: end;
+  position: absolute;
+  bottom: 14px;
 `;
