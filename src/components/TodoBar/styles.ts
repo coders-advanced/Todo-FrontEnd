@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
     gap: 10px;
     justify-content: end;
     padding: 10px;
-    margin: 5px;
     border-radius: 8px;
   `}
 `;

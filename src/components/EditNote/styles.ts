@@ -11,18 +11,19 @@ export const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 10;
+  padding-inline: 20px;
 `;
 export const EditContainer = styled.div`
   background-color: white;
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  min-height: 200px;
+  min-height: 250px;
   width: 100%;
   border: 1px solid rgba(146, 151, 183, 0.16);
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
   border-radius: 12px;
-  padding: 18px 20px;
+  padding: 30px 40px;
 `;
 export const Tag = styled.div`
   position: relative;

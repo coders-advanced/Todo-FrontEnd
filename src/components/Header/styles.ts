@@ -11,6 +11,7 @@ export const Container = styled.header`
 export const Navbar = styled.nav`
   max-width: 1440px;
   width: 100%;
+  padding-inline: 20px;
   margin: 0 auto;
   font-weight: 400;
   font-size: 22px;
