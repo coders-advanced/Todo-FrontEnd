@@ -1,20 +1,29 @@
 import { ReactNode } from "react";
-import { ButtonContainer } from "./styles";
+import * as S from "./styles";
 
-interface ButtonProps {
+export type ButtonProps = {
   children: ReactNode;
   executeOnPress?: () => void;
-  buttonTheme?: "black" | "white";
-}
+  variant?: "todo" | "primary" | "secondary";
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode,
+};
 
 export function CustomButton({
   children,
+  variant,
+  leftIcon,
+  rightIcon,
   executeOnPress,
-  buttonTheme = "black",
 }: ButtonProps) {
   return (
-    <ButtonContainer buttonTheme={buttonTheme} onClick={executeOnPress}>
+    <S.ButtonContainer
+      variant={variant}
+      onClick={executeOnPress}
+    >
+      {leftIcon && <S.ButtonIcon>{leftIcon}</S.ButtonIcon>}
       {children}
-    </ButtonContainer>
+      {rightIcon && <S.ButtonIcon>{rightIcon}</S.ButtonIcon>}
+    </S.ButtonContainer>
   );
 }

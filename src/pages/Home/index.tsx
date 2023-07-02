@@ -24,8 +24,8 @@ export const Home = () => {
       </Main>
 
       <Footer>
-        <CustomButton>criar conta</CustomButton>
-        <CustomButton buttonTheme="white">entrar</CustomButton>
+        <CustomButton variant="primary">criar conta</CustomButton>
+        <CustomButton variant="secondary">entrar</CustomButton>
       </Footer>
     </HomeContainer>
   );

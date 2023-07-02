@@ -1,23 +1,51 @@
-import { styled } from "styled-components";
+import styled, { DefaultTheme, css } from "styled-components";
+import { ButtonProps } from ".";
 
-interface ButtonProps {
-  buttonTheme: "black" | "white"
-}
-
+const ButtonModifiers = {
+  todo: () => css`
+    padding: 7px 20px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 8px;
+    border: solid 1px #E9E8EB;
+    font-weight: 500;
+    text-transform: capitalize
+  `,
+  primary: (theme: DefaultTheme) => css`
+    background-color: ${theme["primary-purple-dark"]};
+    `,
+  secondary: (theme: DefaultTheme) => css`
+    background-color: ${theme["primary-white"]};
+    color: #000;
+  `
+};
 export const ButtonContainer = styled.button<ButtonProps>`
-  width: 269px;
-  height: 60px;
-  background-color: ${props => props.buttonTheme === "black"? "#111010" : "#FBEEFF"};
-  color: ${props => props.buttonTheme === "black"? "#FBEEFF" : "#111010" };
-  border: none;
-  border-radius: 6px;
-  font-size: 1.125rem;
-  font-weight: bold;
-
-  transition: background-color 150ms;
-  
-  &:hover {
+  ${({ variant, theme }) => css`
+    padding: 17px 88px;
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: ${theme.fonts.display};
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
-    background-color: ${props => props.buttonTheme === "black"? "#000000" : "#FFFFFF"};
-  }
+    &:hover {
+      filter: brightness(0.8);
+    }
+    ${!!variant && ButtonModifiers[variant](theme)}
+  `}
+`;
+
+export const ButtonIcon = styled.span`
+  svg{
+    display: block;
+
+  }  
 `;
